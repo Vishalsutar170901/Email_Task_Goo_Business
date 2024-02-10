@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Input Form</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <img src="Img.png" alt="Small Image" class="corner-image">
+    <div class="container">
+        <h2 class="heading">Compose Email</h2>
+
+
+<div class="email-form">
+    <label for="receiver-email">Receiver Email:</label>
+    <input type="email" id="receiver-email" name="receiver-email" required>
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="button" onclick="sendEmail()">Send</button>
+</div>
+</div>
+<script>
+    function sendEmail() {
+        var receiverEmail = document.getElementById("receiver-email").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("message").value;
+        console.log("Receiver Email: " + receiverEmail);
+        console.log("Subject: " + subject);
+        console.log("Message: " + message);
+    }
+</script>
+
+</body>
+</html>
